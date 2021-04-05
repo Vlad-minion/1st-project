@@ -1,0 +1,141 @@
+
+/*Burger menu*/
+ @media(max-width: 1090px){
+       
+.mobile__section {
+    position: fixed;
+    top: 16px;
+    right: 10px;
+    z-index: 10;
+}
+
+
+.menu__btn {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: relative;
+    border-radius: 10px;
+    
+}
+.menu__btn span,
+.menu__btn span::before,
+.menu__btn span::after {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-right: -10.5px; 
+    margin-top: -1px;
+    width: 20px;
+    height: 2px;
+    background-color: rgb(8, 8, 8);
+} 
+
+.menu__btn span::before,
+.menu__btn span::after {
+    content: '';
+    display: block;
+    transition: 1s;
+}
+.menu__btn span::before {
+    transform: translateY(-5px);
+}
+.menu__btn span::after {
+    transform: translateY(5px);
+}
+
+.menu__btn_active span::before {
+    transform: rotate(35deg);
+    transform-origin:right bottom;
+    width: 10px;
+
+}
+
+.menu__btn_active span::after{
+    transform: rotate(-35deg);
+    transform-origin:right top;
+    width: 10px;
+}
+  .wrapper {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(26, 25, 25, 0.8);
+      transition: 1s ease-in-out;
+      transform:  translateX(200%);
+  }
+      .wrapper_show{
+transform: translateX(0%);
+      }
+
+  .s-l-icon ul {
+      padding: 0;
+      margin: 0;
+  }
+ 
+.s-l-icon ul a {
+    display: inline-flex;
+    justify-content: space-between;
+        font-size: 20px;
+    padding: 12px;
+}
+
+
+
+
+
+
+
+  .navigation ul {
+    position: fixed;
+    top: 248px;
+    right: 115px;
+     display: flex;
+     flex-direction: column;
+     justify-content:center ;
+     text-align: center;
+     font-size: 24px;
+     line-height: 2.8;
+     }
+     li { 
+        list-style-type: none;
+     }
+     a {
+         color: rgb(253, 253, 253);
+         text-decoration: none;
+     }
+      a:hover {
+          color: #4291eb;
+          text-decoration: none;
+      }
+      .s-l-icon {
+          position: fixed;
+          top: 500px;
+          display: inline-block;
+          text-align: center;  
+          right: 64px;
+          
+             } 
+     
+       .logo {
+           position: fixed;
+           top: 185px;
+           font-size: 30px;
+           right: 118px;
+           color: #fff;
+       }
+    
+
+    .about__container {
+        width: 313px;
+
+height: 100vh;
+position: fixed;
+right: 27px;
+top: 20px;
+    }
+}

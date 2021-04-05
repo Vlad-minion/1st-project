@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Abrade';
+    src: local('Abrade SemiBold'), local('Abrade-SemiBold'),
+        url('Abrade-SemiBold.woff2') format('woff2'),
+        url('Abrade-SemiBold.woff') format('woff'),
+        url('Abrade-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
