@@ -33,5 +33,3 @@ menuBtn.addEventListener('click', function (evt) {
 
        
     })
-
-
