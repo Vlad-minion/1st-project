@@ -212,6 +212,7 @@ max-width: 320px;
    .about__content {
     width: 100%; 
     }
+    
 
     .about__content p {
         display: inline;
@@ -282,21 +283,30 @@ left: 122px;
          }
          .split {
              position: absolute;
-             width: 270px;
-             height: 400px;
+             width: 300px;
+             height: 677px;
              overflow: hidden;
              
          }
          
          .split.left {
-            background: url("../img/ОСНОВНАЯ.jpg");
+            
             background-repeat: no-repeat;
             background-size: cover;
-           left: 0;
+        background-color: #1f2330;
             position: absolute;
             border-radius: 40px;
-            top: 430px;
-            right: 47px;
+            top: 765px;
+            right: 33px;
+         }
+         .split_avatar {
+             width: 200px;
+             height: 150px;
+             background: url(../img/карина.jpg);
+             position: relative;
+                 left: 51px;
+    top: 50px;
+
          }
 
          .split.left::before {
@@ -304,16 +314,16 @@ left: 122px;
              position: absolute;
              width: 100%;
              height: 100%;
-             background-color: var(--left-bg-color);
+             
          }
 
          .split.right {
-             right: 0;
-             background: url("../img/right.jpg");
+             
+             background-color: #1f2330;
              background-repeat: no-repeat;
              background-size: cover;
              border-radius: 40px;
-             right: 47px;
+             right: 45px;
             }
 
             .split.right ,.split.left ,.split.right::before ,.split.left::before {
@@ -325,25 +335,10 @@ left: 122px;
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                background-color: var(--right-bg-color);
+                
             }
 
-            .hover-left .left {
-                width: var(--hover-width);
-            }
-
-            .hover-left .right {
-                width: var(--other-width);
-            }
-
-            .hover-right .right {
-                width: var(--hover-width);
-            }
-
-            .hover-right .left {
-                width: var(--other-width);
-            }
-
+           
            
              h1{
                  font-size: 2rem;
