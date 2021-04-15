@@ -10,7 +10,7 @@
 
 :root {
     --left-bg-color: rgba(248, 93, 152, 0.3);
-    --right-bg-color: rgba(221, 164, 197, 0.3);
+    --right-bg-color: rgba(118, 90, 245, 0.3);
     --left-btn-hover-color: rgb(243, 44, 44, 0.6);
     --right-btn-hover-color: rgb(231, 221, 71, 0.8);
     --hover-width: 75%;
@@ -153,6 +153,25 @@ background-color: rgba(12, 14, 20, 0.5);
     color: #4291eb;
 
 }
+.contin {
+    height: 80px;
+width: 270px;
+position: relative;
+left: 618px;
+bottom: 76px;
+border: 3px solid #fff;
+border-radius: 20px 20px 60px 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #fff;
+}
+.contin h3 {
+    margin: 0;
+    font-size: 30px;
+    color: #1fa0cc;
+}
+
 }
 
 
@@ -342,11 +361,12 @@ ul {
              width: 50%;
              height: 100%;
              overflow: hidden;
+             border-radius: 60px;
          }
          
          .split.left {
             left: 0;
-            background: url("../img/ОСНОВНАЯ.jpg");
+            background: url("../img/Victor/ну-такое.jpg");
             background-repeat: no-repeat;
             background-size: cover;
          }
@@ -361,7 +381,7 @@ ul {
 
          .split.right {
              right: 0;
-             background: url("../img/right.jpg");
+             background: url("../img/Victor/светильник.jpg");
              background-repeat: no-repeat;
              background-size: cover;
             }
@@ -380,7 +400,9 @@ ul {
             .show_onMobile_container {
                 display: none;
             }
-
+            .show_onMobile_container_right{
+                display: none;
+            }
             .hover-left .left {
                 width: var(--hover-width);
             }
