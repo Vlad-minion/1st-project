@@ -93,7 +93,7 @@ transform: translateX(0%);
   .navigation ul {
     position: fixed;
     top: 248px;
-    right: 115px;
+    right: 101px;
      display: flex;
      flex-direction: column;
      justify-content:center ;
@@ -121,12 +121,19 @@ transform: translateX(0%);
           
              } 
      
-       .logo {
+       .logo_mobile {
            position: fixed;
-           top: 185px;
-           font-size: 30px;
-           right: 118px;
+           top: 186px;
+          
+           right: 136px;
            color: #fff;
+       }
+
+       .logo_mobile img {
+           width: 97px;
+       }
+       .logo {
+           display: none;
        }
 
     }    

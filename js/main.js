@@ -33,3 +33,17 @@ menuBtn.addEventListener('click', function (evt) {
 
        
     })
+
+
+    const playBtn = document.querySelector('.about__vid__play_btn')
+   const previewDst = document.querySelector('.about__video__img')
+    const vidPlay = document.querySelector('.about__video')
+
+
+    playBtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        playBtn.classList.toggle('playBtn_hide') 
+        previewDst.classList.toggle('prevDst');
+        
+
+    })

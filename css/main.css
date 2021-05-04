@@ -50,15 +50,13 @@ html,body {
 
    .about_content{
        width: 45%;
+       position: relative;
+       left: 30px;
    }
-  .about_content  h3 {
-        font-size: 30px;
-        position: relative;
-        top: 27px;
-    }
+  
     .about__btn{
      position: relative;
-     top: 40px;
+     top: 46px;
      left: 90px;
 line-height: 1;
 font-size: 16px;
@@ -71,7 +69,20 @@ border-radius: 30px;
     }
    .about__title {
            position: relative;
-           top: 30px;
+           top: 0px;
+           width: 683px;
+height: 193px;
+left: 26px;
+}
+.about__title h2 {
+    font-size: 35px;
+position: relative;
+right: 10px; 
+}
+
+.about__title h3 {
+    font-size: 27px;
+    margin: 0;
 }
 
 .about__text {
@@ -110,6 +121,10 @@ top: 21px;
 z-index: 1;
 
 }
+.prevDst {
+    display: none;
+}
+
 .a_video_img_bg {
     width: 100%;
 height: 100%;
@@ -153,6 +168,10 @@ background-color: rgba(12, 14, 20, 0.5);
     color: #4291eb;
 
 }
+.playBtn_hide {
+    display: none;
+}
+
 .contin {
     height: 80px;
 width: 270px;
@@ -160,7 +179,7 @@ position: relative;
 left: 618px;
 bottom: 76px;
 border: 3px solid #fff;
-border-radius: 20px 20px 60px 60px;
+border-radius: 20px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -291,16 +310,22 @@ top: 60%;
     height: 100px;
     width: 100%;
     background-color: rgba(26, 25, 25, 0.3);
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 17px;
     transition: top 0.5s ease-in-out;
     }
         
 
         .logo {
-           
+           cursor: pointer;
             right: 100px;
+        }
+        .logo img {
+            width: 85px;
+        }
+
+        .logo_mobile {
+            display: none;
         }
 
         .navbar.hide {
@@ -366,7 +391,7 @@ ul {
          
          .split.left {
             left: 0;
-            background: url("../img/Victor/ну-такое.jpg");
+            background: url("../img/jTxL1HG17Jg.jpg");
             background-repeat: no-repeat;
             background-size: cover;
          }
@@ -376,12 +401,12 @@ ul {
              position: absolute;
              width: 100%;
              height: 100%;
-             background-color: var(--left-bg-color);
+             
          }
 
          .split.right {
              right: 0;
-             background: url("../img/Victor/светильник.jpg");
+             background: url("../img/Victor/11.jpg");
              background-repeat: no-repeat;
              background-size: cover;
             }
@@ -395,8 +420,36 @@ ul {
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                background-color: var(--right-bg-color);
+                
             }
+.split a {
+    color: rgb(253, 253, 253);
+text-decoration: none;
+display: flex;
+justify-content: space-around;
+border-radius: 30px;
+background-color: #24ceff;
+background-image: linear-gradient(161deg, #24ceff, #3646c2);
+box-shadow: 4px 1px 3px -10px #000;
+text-transform: uppercase;
+color: #fff;
+padding: 20px 40px;
+font-size: 12px;
+font-weight: 500;
+text-align: center;
+text-transform: uppercase;
+border: none;
+outline: none;
+line-height: 1;
+transition: all .3s;
+padding: 16px 20px;
+min-width: 180px;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translateX(50%);
+}
+
             .show_onMobile_container {
                 display: none;
             }
