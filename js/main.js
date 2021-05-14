@@ -22,25 +22,28 @@ menuBtn.addEventListener('click', function (evt) {
 
      const playBtn = document.querySelector ('.about__vid__play_btn')
      const playImg = document.querySelector ('.about__video__img')
-     const playVid = document.querySelector ('.controls')
+     const playVid = document.getElementsByClassName ('.about__video')
 
     playBtn.addEventListener('click',function (evt){
         evt.preventDefault();
         playBtn.classList.toggle('play_btn_disalable')
         playImg.classList.toggle('play_img_disalable')
-        
+       playVid.play()
     })
-// click emullation 
 
   
     //scroll navbar
 
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY ) {
             return document.querySelector('.navbar').classList.add('hide')
-        }
+        } 
         return document.querySelector('.navbar').classList.remove('hide')
-
+        
        
     })
+
+
+
+    

@@ -319,6 +319,7 @@ top: 60%;
         }
 
         .navbar.hide {
+            position: fixed;
             top: -100px;
         }
     
