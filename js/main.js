@@ -18,10 +18,21 @@ menuBtn.addEventListener('click', function (evt) {
        evt.preventDefault();
     menuBtn.classList.toggle('menu__btn_active')
     wrapper.classList.toggle('wrapper_show')
-    
+     })
 
+     const playBtn = document.querySelector ('.about__vid__play_btn')
+     const playImg = document.querySelector ('.about__video__img')
+     const playVid = document.querySelector ('.controls')
+
+    playBtn.addEventListener('click',function (evt){
+        evt.preventDefault();
+        playBtn.classList.toggle('play_btn_disalable')
+        playImg.classList.toggle('play_img_disalable')
+        
     })
+// click emullation 
 
+  
     //scroll navbar
 
 
