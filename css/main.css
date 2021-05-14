@@ -119,8 +119,8 @@ width: 760px;
 height: 460px;
 top: 21px;
 z-index: 1;
-
 }
+
 .prevDst {
     display: none;
 }
@@ -132,7 +132,7 @@ background: linear-gradient(to right, #0c0e14, rgba(12, 14, 20, 0));
 z-index: 2;
 }
 
-.about__video {
+#about__video {
     
     width: 100%;
 height: 100%;
