@@ -2,7 +2,7 @@
 
 
 /*Burger menu*/
- @media(max-width: 1090px){
+ @media screen and (max-width: 1090px){
        
 .mobile__section {
     position: fixed;
@@ -142,7 +142,7 @@ transform: translateX(0%);
 
 
 
-@media(max-width: 760px){
+@media screen and (max-width: 760px){
 
 
     .video_intro {
@@ -335,7 +335,7 @@ left: 122px;
 }
 
 /*Split for Mobile*/
-@media(max-width: 1000px){
+@media screen and (max-width: 1000px){
  #main-cont {
           height: 100vh;
           position: relative;
