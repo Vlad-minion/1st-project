@@ -623,8 +623,14 @@ transition: all .3s;
                 color: #fff;
                  transform: translateX(-50%);                                
              }
+            
+             .split_avatar {
+                 display: none;
+             }
 
-
+             .split_avatar_right {
+                 display: none;
+             }
 
 
 
@@ -650,7 +656,7 @@ transition: all .3s;
                  padding: 1.2rem;
                  width: 12rem;
              }
-            }
+            
             
 
            .footer {
@@ -726,4 +732,4 @@ text-align: center
             justify-content: space-between;
             align-items: flex-end;
         }
-    
+}
