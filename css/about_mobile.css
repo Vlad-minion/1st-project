@@ -1,6 +1,10 @@
 
 /*Burger menu*/
- @media(max-width: 1090px){
+@import url(./about.css);
+
+
+
+ /*@media(max-width: 1090px){
        
 .mobile__section {
     position: fixed;

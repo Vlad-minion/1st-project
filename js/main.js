@@ -2,12 +2,31 @@
 const left = document.querySelector('.left')
 const right = document.querySelector('.right')
 const container = document.querySelector('.container')
+const preCont = document.querySelector('.showonMobile_prev_prev')
+const preContRight = document.querySelector('.showonMobile_prev_prev_right')
 
-left.addEventListener('mouseenter', () => container.classList.add('hover-left'))
-left.addEventListener('mouseleave', () => container.classList.remove('hover-left'))
 
-right.addEventListener('mouseenter', () => container.classList.add('hover-right'))
-right.addEventListener('mouseleave', () => container.classList.remove('hover-right'))
+left.addEventListener('mouseenter', () => {
+    container.classList.add('hover-left');
+    preCont.classList.add('showonMobile_prev_prev_show')
+    })
+
+left.addEventListener('mouseleave', () => {
+    container.classList.remove('hover-left')
+preCont.classList.remove('showonMobile_prev_prev_show')
+
+
+})
+
+right.addEventListener('mouseenter', () => {
+     container.classList.add('hover-right')
+preContRight.classList.add('showonMobile_prev_prev_show_right')
+
+})
+right.addEventListener('mouseleave', () => {
+    container.classList.remove('hover-right')
+preContRight.classList.remove('showonMobile_prev_prev_show_right')
+})
 
 //burger menu for mobile
 const menuBtn = document.querySelector('.menu__btn')
