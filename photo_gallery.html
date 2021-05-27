@@ -12,6 +12,8 @@
 <!--Social icons link kit  -->
 <script src="https://kit.fontawesome.com/64e595f018.js" crossorigin="anonymous"></script>
 <!--Css Link-->
+<link rel="stylesheet" href="./node_modules/photoswipe/dist/photoswipe.css">
+<link rel="stylesheet" href="./node_modules/photoswipe/dist/default-skin/default-skin.css">
   <link rel="stylesheet" href="./css/photo_gallery.css">
     <title>ФОТО ГАЛЕРЕЯ</title>
 </head>
@@ -56,36 +58,85 @@
 
 
     <!--3D gallery-->
-<div class="carousel" data-gap="120">
-    <figure style="transform-origin: 50% 50% -600.159px; transform: rotateY(0rad);">
-        <img src="./img/Victor/1.1.jpg" alt="" style="padding: 0px;">
-    <img src="./img/Victor/1.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(0.785402rad);">
-        <img src="./img/Victor/2.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(1.570804rad);">
-            <img src="./img/Victor/3.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(2.356206rad);">
-                <img src="./img/Victor/4.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(3.141608rad);">
-                    <img src="./img/Victor/5.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(3.92701rad);">
-                            <img src="./img/Victor/6.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(4.712412rad);">
-            <img src="./img/Victor/7.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(5.497814rad);">
-    <img src="./img/Victor/8.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(6.283216rad);">
-            <img src="./img/Victor/9.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(7.068618rad);">
-                     <img src="./img/Victor/10.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(7.85402rad);">
-                            <img src="./img/Victor/11.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(8.639422rad);">
-                                     <img src="./img/Victor/12.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(9.424824rad);">
-                                             <img src="./img/Victor/13.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(10.210226rad);">
-                                 <img src="./img/Victor/14.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(10.995628rad);">
-                            <img src="./img/Victor/15.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(11.78103rad);">
-                                     <img src="./img/Victor/16.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(12.566432rad);">
-                                             <img src="./img/Victor/17.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(13.351834rad);">
-                                                    <img src="./img/Victor/18.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(14.137236rad);">
-                                                         <img src="./img/Victor/19.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(14.922638rad);">
-                                                              <img src="./img/Victor/20.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(15.70804rad);">
-                                                     <img src="./img/Victor/21.jpg" alt="" style="padding: 0px;  transform-origin: 50% 50% -600.159px; transform: rotateY(16.493442rad);">
-    </figure>
-    <nav>
-        <button class="nav prev">Prev</button>
-        <button class="nav next">Next</button>
-    </nav>
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
-    <script src="./js/photo.js"></script>
+
+
+    <script src="./node_modules/photoswipe/dist/photoswipe.min.js"></script>
+<script src="./node_modules/photoswipe/dist/photoswipe-ui-default.js"></script>
+  <script src="./js/photo.js"></script>
 </body>
 </html>
+
+
+
+
+
+

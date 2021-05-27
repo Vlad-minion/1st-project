@@ -5,11 +5,10 @@ const container = document.querySelector('.container')
 const preCont = document.querySelector('.showonMobile_prev_prev')
 const preContRight = document.querySelector('.showonMobile_prev_prev_right')
 
-
 left.addEventListener('mouseenter', () => {
     container.classList.add('hover-left');
     preCont.classList.add('showonMobile_prev_prev_show')
-    })
+})
 
 left.addEventListener('mouseleave', () => {
     container.classList.remove('hover-left')
@@ -17,6 +16,8 @@ preCont.classList.remove('showonMobile_prev_prev_show')
 
 
 })
+
+
 
 right.addEventListener('mouseenter', () => {
      container.classList.add('hover-right')

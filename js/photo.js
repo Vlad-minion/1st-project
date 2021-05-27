@@ -1,82 +1,35 @@
-   
+var openPhotoSwipe = function() {
+    var pswpElement = document.querySelectorAll('.pswp')[0];
 
-window.addEventListener('load', () => {
-  var
-    carousels = document.querySelectorAll('.carousel')
-  ;
-
-  for (var i = 0; i < carousels.length; i++) {
-    carousel(carousels[i]);
-  }
-});
-
-function carousel(root) {
-  var
-    figure = root.querySelector('figure'),
-    nav = root.querySelector('nav'),
-    images = figure.children,
-    n = images.length,
-    gap = root.dataset.gap || 0,
-    bfc = 'bfc' in root.dataset,
+    // build items array
+    var items = [
+        {
+            src: './img/Victor/1.jpg',
+            w: 964,
+            h: 1024
+        },
+        {
+            src: 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg',
+            w: 1024,
+            h: 683
+        }
+    ];
     
-    theta =  2 * Math.PI / n,
-    currImage = 0
-  ;
-  
-  setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
-  window.addEventListener('resize', () => { 
-    setupCarousel(n, parseFloat(getComputedStyle(images[0]).width)) 
-  });
+    // define options (if needed)
+    var options = {
+       // history & focus options are disabled on CodePen        
+        history: false,
+        focus: false,
 
-  setupNavigation();
-
-  function setupCarousel(n, s) {
-    var 
-      apothem = s / (2 * Math.tan(Math.PI / n))
-    ;
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+        
+    };
     
-    figure.style.transformOrigin = `50% 50% ${- apothem}px`;
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+};
 
-    for (var i = 0; i < n; i++)
-      images[i].style.padding = `${gap}px`;
-    for (i = 1; i < n; i++) {
-      images[i].style.transformOrigin = `50% 50% ${- apothem}px`;
-      images[i].style.transform = `rotateY(${i * theta}rad)`;
-    }
-    if (bfc)
-      for (i = 0; i < n; i++)
-         images[i].style.backfaceVisibility = 'hidden';
-    
-    rotateCarousel(currImage);
-  }
+openPhotoSwipe();
 
-  function setupNavigation() {
-    nav.addEventListener('click', onClick, true);
-    
-    function onClick(e) {
-      e.stopPropagation();
-      
-      var t = e.target;
-      if (t.tagName.toUpperCase() != 'BUTTON')
-        return;
-      
-      if (t.classList.contains('next')) {
-        currImage++;
-      }
-      else {
-        currImage--;
-      }
-      
-      rotateCarousel(currImage);
-    }
-      
-  }
-
-  function rotateCarousel(imageIndex) {
-    figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
-  }
-  
-}
-
-
-
+document.getElementById('btn').onclick = openPhotoSwipe;
